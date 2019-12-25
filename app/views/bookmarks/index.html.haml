@@ -1,6 +1,7 @@
 .wrapper
   %p#notice= notice
-  = link_to 'New Bookmark', new_bookmark_path, class: 'btn btn-secondary'
+  = render 'navbar'
+  = link_to 'New Bookmark', new_bookmark_path, class: 'btn btn-secondary py-0 px-1'
   %table.table.table-hover.mt-2
     %thead
       %tr
@@ -14,4 +15,4 @@
           %td= link_to 'Edit', edit_bookmark_path(bookmark)
           %td= link_to 'Destroy', bookmark, method: :delete, data: {confirm: "#{bookmark.title ||= bookmark.url} を削除します。よろしいですか？"}
   %br/
-  = link_to 'New Bookmark', new_bookmark_path, class: 'btn btn-secondary'
+  = link_to 'New Bookmark', new_bookmark_path, class: 'btn btn-secondary py-0 px-1'
