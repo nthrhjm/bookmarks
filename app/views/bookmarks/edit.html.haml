@@ -1,7 +1,7 @@
 = render 'navbar'
 .wrapper
-  %h3 Editing Bookmark
+  %p Editing Bookmark
   = render 'form', bookmark: @bookmark
-  = link_to 'Show', @bookmark
+  = link_to 'Show', @bookmark, class: 'border_spread_btn'
   |
-  = link_to 'Back', bookmarks_path
+  = link_to 'Back', bookmarks_path, class: 'border_spread_btn'
