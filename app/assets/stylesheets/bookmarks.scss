@@ -1,0 +1,22 @@
+// Place all the styles related to the Bookmarks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+  box-sizing: border-box;
+  .header {
+    .user_status {
+      display:flex;
+      justify-content: flex-end;
+    }
+  }
+  .wrapper {
+    width: 100%;
+
+    a {
+      text-decoration: none;
+    }
+    .btn-secondary {
+      color: white;
+    }
+  }
+}

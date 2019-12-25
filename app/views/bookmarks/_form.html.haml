@@ -1,0 +1,14 @@
+= form_with(model: bookmark, local: true) do |form|
+  - if bookmark.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(bookmark.errors.count, "error")
+        prohibited this bookmark from being saved:
+      %ul
+        - bookmark.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :url
+    = form.text_field :url, class: "form-control"
+  .actions
+    = form.submit class: "btn btn-secondary"

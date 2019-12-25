@@ -1,0 +1,17 @@
+.wrapper
+  %p#notice= notice
+  = link_to 'New Bookmark', new_bookmark_path, class: 'btn btn-secondary'
+  %table.table.table-hover.mt-2
+    %thead
+      %tr
+        %th Url
+        %th{:colspan => "3"}
+    %tbody
+      - @bookmarks.each do |bookmark|
+        %tr
+          %td= link_to bookmark.title, bookmark.url, target: "_blank"
+          %td= link_to 'Show', bookmark
+          %td= link_to 'Edit', edit_bookmark_path(bookmark)
+          %td= link_to 'Destroy', bookmark, method: :delete, data: {confirm: "#{bookmark.title ||= bookmark.url} を削除します。よろしいですか？"}
+  %br/
+  = link_to 'New Bookmark', new_bookmark_path, class: 'btn btn-secondary'
