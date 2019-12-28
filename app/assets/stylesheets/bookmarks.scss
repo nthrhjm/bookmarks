@@ -2,19 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 * {
-  box-sizing: border-box;
-  .header {
-    .user_status {
-      display:flex;
-      justify-content: flex-end;
+  .nav-wrapper {
+    border-bottom: #999999 1px solid;
+    .nav {
+      height: 80px;
+
+      .user_status {
+        display: flex;
+        justify-content: flex-end;
+      }
     }
   }
   .wrapper {
     width: 80%;
-    margin: 5px auto;
+    height: calc(100% - 80px);
+    margin: 20px auto;
     a {
       color: #2E2F30;
       text-decoration: none;
+    }
+    .bookmark-title:hover {
+      font-size: 14px;
     }
 
     .btn-sticky {
