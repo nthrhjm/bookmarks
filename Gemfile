@@ -69,7 +69,7 @@ gem 'rails_autolink'
 
 gem 'bootstrap'
 
-gem 'devise'
+#gem 'devise'
 
 gem 'haml-rails'
 gem 'erb2haml'
