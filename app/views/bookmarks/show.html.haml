@@ -10,6 +10,8 @@
     %strong Description
   %div.mb-5
     = @bookmark.description
-  = link_to 'Edit', edit_bookmark_path(@bookmark),class: 'border_spread_btn'
+  = link_to 'Edit Boolmark', edit_bookmark_path(@bookmark),class: 'border_spread_btn'
   |
-  = link_to 'Back', bookmarks_path, class: 'border_spread_btn'
+  = link_to 'Delete Bookmark', @bookmark, method: :delete,class: 'border_spread_btn', data: {confirm: "#{@bookmark.title ||= @bookmark.url} を削除します。よろしいですか？"}
+  |
+  = link_to 'Back to Top page', bookmarks_path, class: 'border_spread_btn'
