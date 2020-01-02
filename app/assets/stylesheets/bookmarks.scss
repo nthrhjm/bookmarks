@@ -5,8 +5,14 @@
   .nav-wrapper {
     border-bottom: #999999 1px solid;
     .nav {
+      display: flex;
       height: 80px;
-
+      .search-box {
+        display: flex;
+        .search-item {
+          float: right;
+        }
+      }
       .user_status {
         display: flex;
         justify-content: flex-end;

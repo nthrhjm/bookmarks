@@ -61,7 +61,7 @@ gem 'pry-byebug'
 gem 'rails_autolink'
 
 #検索機能
-#gem 'ransack'
+gem 'ransack'
 
 #pagination
 #gem 'kaminari'

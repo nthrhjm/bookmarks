@@ -2,10 +2,10 @@
   %p#notice= notice
   %nav.navbar.navbar-light.mb-1
     = link_to 'Bookmarks', root_path, class: 'navbar-brand m-2'
-
-
-
-
+    - if current_page?(root_path) || @url =~ /\/bookmarks\?\w*/
+      = search_form_for @q do |f|
+        .search-box
+          = f.search_field :title_cont, class: 'form-control m-2', placeholder: 'search title'
 
 
 
