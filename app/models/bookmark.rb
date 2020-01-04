@@ -1,6 +1,7 @@
 class Bookmark < ApplicationRecord
   validates :url, presence: true
   before_save :fetch_title
+  belongs_to :user
 
   def fetch_title
     begin

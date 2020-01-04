@@ -1,5 +1,5 @@
 = render 'navbar'
-.wrapper
+.content-wrapper
   %p
     %strong Title:
     = @bookmark.title
@@ -14,4 +14,4 @@
   |
   = link_to 'Delete Bookmark', @bookmark, method: :delete,class: 'border_spread_btn', data: {confirm: "#{@bookmark.title ||= @bookmark.url} を削除します。よろしいですか？"}
   |
-  = link_to 'Back to Top page', bookmarks_path, class: 'border_spread_btn'
+  = link_to 'Back to Top page', root_path, class: 'border_spread_btn'
