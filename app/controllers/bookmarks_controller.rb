@@ -13,6 +13,9 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/1
   # GET /bookmarks/1.json
   def show
+    if @bookmark.user_id != current_user.id
+      redirect_to root_path
+    end
   end
 
   # GET /bookmarks/new
@@ -22,6 +25,9 @@ class BookmarksController < ApplicationController
 
   # GET /bookmarks/1/edit
   def edit
+    if @bookmark.user_id != current_user.id
+      redirect_to root_path
+    end
   end
 
   # POST /bookmarks
@@ -57,10 +63,14 @@ class BookmarksController < ApplicationController
   # DELETE /bookmarks/1
   # DELETE /bookmarks/1.json
   def destroy
-    @bookmark.destroy
-    respond_to do |format|
-      format.html { redirect_to bookmarks_url, notice: 'Bookmark was successfully destroyed.' }
-      format.json { head :no_content }
+    if @bookmark.user_id != current_user.id
+      redirect bookmark_path
+    else
+      @bookmark.destroy
+      respond_to do |format|
+        format.html { redirect_to bookmarks_url, notice: 'Bookmark was successfully destroyed.' }
+        format.json { head :no_content }
+      end
     end
   end
 
