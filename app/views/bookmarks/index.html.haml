@@ -1,15 +1,24 @@
-= render 'navbar'
 .wrapper
-  = link_to 'New Bookmark', new_bookmark_path, class: 'border_spread_btn mb-3'
-
-
-  %table.table.table-hover.mt-1
-    %thead
-      %tr
-        %th Title
-        %th{colspan: "3"}
-    %tbody
-      - @bookmarks.each do |bookmark|
+  = render 'navbar'
+  .content-wrapper
+    = link_to 'New Bookmark', new_bookmark_path, class: 'border_spread_btn mb-3'
+    - if current_page?(root_path) || @url =~ /\/bookmarks\?\w*/
+      %h6.mt-5 search URL title
+      = search_form_for @q do |f|
+        .search-box.row.align-items-center
+          .col-auto
+            = f.search_field :title_cont, class: 'form-control form-control-sm', placeholder: 'Enter title to search'
+          .col-auto
+            = f.search_field :url_cont, class: 'form-control form-control-sm', placeholder: 'Enter URL to search'
+          .col-auto
+            = f.submit class: 'btn btn-light p-1 m-2'
+    %table.table.table-hover.mt-1
+      %thead
         %tr
-          %td= link_to bookmark.title, bookmark.url, target: "_blank", class: 'bookmark-title'
-          %td= link_to 'Show', bookmark, class: 'border_spread_btn'
+          %th Title
+          %th{colspan: "3"}
+      %tbody
+        - @bookmarks.each do |bookmark|
+          %tr
+            %td= link_to bookmark.title, bookmark.url, target: "_blank", class: 'bookmark-title'
+            %td= link_to 'Show', bookmark, class: 'border_spread_btn'
