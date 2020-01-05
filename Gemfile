@@ -64,7 +64,7 @@ gem 'rails_autolink'
 gem 'ransack'
 
 #pagination
-#gem 'kaminari'
+gem 'kaminari'
 
 
 gem 'bootstrap'

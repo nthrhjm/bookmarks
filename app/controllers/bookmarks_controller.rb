@@ -6,7 +6,7 @@ class BookmarksController < ApplicationController
   # GET /bookmarks.json
   def index
 
-    @bookmarks = @q.result(distinct: true).order('created_at desc')
+    @bookmarks = @q.result(distinct: true).page(params[:page]).order('created_at desc').per(10)
 
   end
 
