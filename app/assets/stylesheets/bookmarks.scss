@@ -4,10 +4,10 @@
 * {
   .wrapper {
     width: 100vw;
+    height: 100vh;
     .nav-wrapper {
       width: 100vw;
       border-bottom: #999999 1px solid;
-
       nav {
         display: flex;
         width: 100%;
@@ -39,7 +39,7 @@
       }
 
       .bookmark-title:hover {
-        font-size: 14px;
+        font-size: 18px;
       }
     }
 
