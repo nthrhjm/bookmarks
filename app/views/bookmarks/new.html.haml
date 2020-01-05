@@ -1,5 +1,6 @@
-= render 'navbar'
-.content-wrapper
-  %p New Bookmark
-  = render 'form', bookmark: @bookmark
-  = link_to 'Back', bookmarks_path, class: 'border_spread_btn'
+.wrapper
+  = render 'navbar'
+  .content-wrapper
+    %p New Bookmark
+    = render 'form', bookmark: @bookmark
+    = link_to 'Back', bookmarks_path, class: 'border_spread_btn'

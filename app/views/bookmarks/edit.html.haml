@@ -1,7 +1,8 @@
-= render 'navbar'
-.content-wrapper
-  %p Editing Bookmark
-  = render 'form', bookmark: @bookmark
-  = link_to 'Show Bookmark', @bookmark, class: 'border_spread_btn'
-  |
-  = link_to 'Back to Top page', root_path, class: 'border_spread_btn'
+.wrapper
+  = render 'navbar'
+  .content-wrapper
+    %p Editing Bookmark
+    = render 'form', bookmark: @bookmark
+    = link_to 'Show Bookmark', @bookmark, class: 'border_spread_btn'
+    |
+    = link_to 'Back to Top page', root_path, class: 'border_spread_btn'
