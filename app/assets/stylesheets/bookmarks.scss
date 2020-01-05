@@ -24,20 +24,19 @@
           justify-content: flex-end;
         }
       }
-
-
     }
-
+    .login-wrapper {
+      width: 500px;
+      margin: 50px auto;
+    }
     .content-wrapper {
       width: 90%;
       height: calc(100% - 80px);
       margin: 20px auto;
-
       a {
         color: #2E2F30;
         text-decoration: none;
       }
-
       .bookmark-title:hover {
         font-size: 18px;
       }

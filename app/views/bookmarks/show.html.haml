@@ -1,6 +1,6 @@
 .wrapper
   = render 'navbar'
-  .content-wrapper
+  .login-wrapper
     %p
       %strong Title:
       = @bookmark.title
@@ -9,7 +9,7 @@
       = link_to @bookmark.url, @bookmark.url, target: "_blank"
     %p
       %strong Description
-    %div.mb-5
+    %div.mb-5.mt-5
       = @bookmark.description
     = link_to 'Edit Boolmark', edit_bookmark_path(@bookmark),class: 'border_spread_btn'
     |

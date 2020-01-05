@@ -2,7 +2,7 @@
   = render 'navbar'
   .content-wrapper
     = link_to 'New Bookmark', new_bookmark_path, class: 'border_spread_btn mb-3'
-    %h6.mt-5 search URL title
+    %h6.mt-5 Search by title or URL
     = search_form_for @q do |f|
       .search-box.row.align-items-center
         .col-auto
@@ -10,7 +10,7 @@
         .col-auto
           = f.search_field :url_cont, class: 'form-control form-control-sm', placeholder: 'Enter URL to search'
         .col-auto
-          = f.submit class: 'btn btn-light p-1 m-2'
+          = f.submit class: 'btn btn-info p-1 mb-2'
     %table.table.table-hover.mt-1
       %thead
         %tr
