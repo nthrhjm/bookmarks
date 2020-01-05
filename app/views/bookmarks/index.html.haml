@@ -10,7 +10,7 @@
         .col-auto
           = f.search_field :url_cont, class: 'form-control form-control-sm', placeholder: 'Enter URL to search'
         .col-auto
-          = f.submit class: 'btn btn-info p-1'
+          = f.submit class: 'btn btn-primary p-1'
     %table.table.table-hover.mt-3
       %thead
         %tr
@@ -21,3 +21,8 @@
           %tr
             %td= link_to bookmark.title, bookmark.url, target: "_blank", class: 'bookmark-title'
             %td= link_to 'Show', bookmark, class: 'border_spread_btn'
+
+    .mb-3.mt-5
+      = paginate @bookmarks
+      = page_entries_info @bookmarks
+
