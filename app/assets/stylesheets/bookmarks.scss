@@ -51,6 +51,15 @@
       border: solid 1px #DADADA;
     }
 
+    .description {
+      text-align: center;
+      width: 80%;
+      margin: 15px auto;
+      p {
+        color: #1B1B1B;
+      }
+    }
+
     .content-wrapper {
       margin: 20px auto;
       width: 90%;
