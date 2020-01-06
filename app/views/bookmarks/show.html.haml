@@ -1,12 +1,13 @@
 .wrapper
   = render 'navbar'
-  .login-wrapper
+  .show-wrapper
     %p
       %strong Title:
-      = @bookmark.title
+      =  simple_format @bookmark.title
     %p
       %strong Url:
-      = link_to @bookmark.url, @bookmark.url, target: "_blank"
+      = simple_format @bookmark.url
+      -#= link_to @bookmark.url, @bookmark.url, target: "_blank"
     %p
       %strong Description
     %div.mb-5.mt-5

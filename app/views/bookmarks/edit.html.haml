@@ -1,9 +1,8 @@
 .wrapper
   = render 'navbar'
-  .login-wrapper
-    %p.font-weight-bold Editing Bookmark
+  .show-wrapper
+    %h4.font-weight-bold.mb-2 Editing Bookmark
+    -#%p Title:
+    = @bookmark.title
     = render 'form', bookmark: @bookmark
-    = link_to 'Show', @bookmark, class: 'border_spread_btn mr-2 mt-5'
-    |
-    = link_to 'Top page', root_path, class: 'border_spread_btn'
-gg
+    = link_to 'Top page', root_path, class: 'border_spread_btn mt-5'

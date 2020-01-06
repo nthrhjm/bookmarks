@@ -20,7 +20,7 @@
         - @bookmarks.each do |bookmark|
           %tr
             %td= link_to bookmark.title, bookmark.url, target: "_blank", class: 'bookmark-title'
-            %td= link_to 'Show', bookmark, class: 'border_spread_btn'
+            %td= link_to 'Edit', edit_bookmark_path(bookmark), class: 'border_spread_btn'
 
     .mb-3.mt-5
       = paginate @bookmarks
