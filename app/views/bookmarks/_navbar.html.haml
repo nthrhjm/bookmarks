@@ -9,8 +9,15 @@
       .user-info
         %p.mx-1
           = link_to current_user.name, edit_user_registration_path, class: 'border_spread_btn mx-2'
-          = link_to 'Logout', destroy_user_session_path, method: :delete, class: 'border_spread_btn', data: { confirm: "ログアウトします。よろしいですか？"}
+          |
+          = link_to 'Log out', destroy_user_session_path, method: :delete, class: 'border_spread_btn ml-2', data: { confirm: "ログアウトします。よろしいですか？"}
     - else
-      = link_to 'Login', new_user_session_path, class: 'border_spread_btn'
+      .user-info
+      %p.mx-1
+        = link_to 'Log in', new_user_session_path, class: 'border_spread_btn mx-2'
+        |
+        = link_to 'Sign up', new_registration_path(resource_name), class: 'border_spread_btn ml-2'
+
+
 
 
