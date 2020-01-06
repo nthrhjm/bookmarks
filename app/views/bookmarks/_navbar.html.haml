@@ -1,7 +1,8 @@
 .nav-wrapper
   %p#notice= notice
   %nav.navbar.navbar-light.mb-1.mr-2
-    = link_to 'Bookmarks', root_path, class: 'navbar-brand m-2'
+    = link_to root_path do
+      %h1.text-dark.m-2 36page
 
 
     -if current_user
