@@ -1,7 +1,7 @@
 .wrapper
   = render 'navbar'
   .login-wrapper
-    %p Editing Bookmark
+    %p.font-weight-bold Editing Bookmark
     = render 'form', bookmark: @bookmark
     = link_to 'Show', @bookmark, class: 'border_spread_btn mr-2 mt-5'
     |

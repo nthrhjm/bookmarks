@@ -5,40 +5,56 @@
   .wrapper {
     width: 100vw;
     height: 100vh;
+
     .nav-wrapper {
       width: 100vw;
       border-bottom: #999999 1px solid;
+
       nav {
         display: flex;
         width: 100%;
         height: 80px;
 
+        a {
+          text-decoration: none;
+        }
+
+        .page36 {
+          font-size: 32px;
+        }
+
         .search-box {
           float: left;
+
           .search-item {
             float: right;
           }
         }
+
         .user-info {
           display: flex;
           justify-content: flex-end;
         }
       }
     }
+
     .login-wrapper {
       width: 500px;
       margin: 50px auto;
       padding: 15px;
       border: solid 1px #DADADA;
     }
+
     .content-wrapper {
       margin: 20px auto;
       width: 90%;
       height: calc(100% - 80px);
+
       a {
         color: #2E2F30;
         text-decoration: none;
       }
+
       .bookmark-title:hover {
         font-size: 18px;
       }
@@ -59,7 +75,6 @@
         transform: translateY(2px);
       }
     }
-
 
     .border_spread_btn {
       position: relative;
