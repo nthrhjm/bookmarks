@@ -5,4 +5,6 @@
     -#%p Title:
     = @bookmark.title
     = render 'form', bookmark: @bookmark
-    = link_to 'Top page', root_path, class: 'border_spread_btn mt-5'
+    = link_to 'Delete', @bookmark, method: :delete,class: 'border_spread_btn mr-2', data: {confirm: "#{@bookmark.title ||= @bookmark.url} を削除します。よろしいですか？"}
+    |
+    = link_to 'Top page', root_path, class: 'border_spread_btn ml-2 mt-5'
