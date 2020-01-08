@@ -5,13 +5,17 @@
       <strong>64page</strong> is a service that saves your bookmarks online.
     </p>
     <p>
-      If you are new, please <strong>sign up</strong> for user registration. After registering the user, press <strong>New Bookmark</strong> on the top page and register your bookmark
+      If you are new, please
+      <%= link_to 'sign up', new_registration_path(resource_name) %>
+      for user registration. After registering the user, press <strong>New Bookmark</strong> on the top page and register your bookmark
     </p>
     <p>
       <strong>64page</strong>はあなたのブックマークをオンラインで保存するサービスです。
     </p>
     <p>
-      初めての方は<strong>sign up</strong>からユーザー登録をお願いします。
+      初めての方は
+      <%= link_to 'sign up', new_registration_path(resource_name) %>
+      からユーザー登録をお願いします。
       ユーザー登録ができたらトップページで<strong>New Bookmark</strong> を押してあなたのブックマークを登録してください。
     </p>
   </div>
